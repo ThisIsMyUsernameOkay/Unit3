@@ -1,0 +1,298 @@
+<html>
+    <head>
+        <title>Home</title>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+
+
+.body
+{
+background-color: #383838
+}
+
+
+.header
+{
+font-size: 32pt;
+}
+
+
+.header2
+{
+font-size: 32pt;
+border-bottom: 2px solid white;
+}
+
+*, *:before, *:after
+{
+box-sizing: border-box;
+}
+
+html, body
+{
+height: 100%;
+}
+
+
+body
+{
+position: relative;
+padding: 20px;
+font-family: 'Libre Baskerville', serif;
+}
+
+h1
+{
+margin: 0;
+padding: 0;
+  
+position: absolute;
+top: 50%;
+left: 50%;
+  
+color: white;
+font-size: 7vmin;
+text-align: center;
+text-transform: uppercase;
+
+transform: translate3d(-50%, -50%, 0);
+}
+
+.wrap
+{
+height: 100%;  
+position: relative;
+overflow: hidden;
+}
+
+  
+.bg
+{
+width: 100%;
+height: 100%;
+    
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+    
+background: url('') no-repeat center center;
+background-size: cover;
+
+transform: scale(1.1);
+}
+
+
+.image1
+{
+margin: auto;
+flex: 0 1 90%;
+background-color:#525252;
+width: 30%;
+height:300px;
+border-radius: 25px;
+background: linear-gradient(180deg, rgba(104,104,104), rgba(72,72,72));
+}
+
+
+.portal-boxes
+{
+background: gray;
+box-sizing: border-box;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+max-width: 100%;
+height: 950px;
+margin: auto;
+padding: 0;
+text-align: center;
+background-image: url("coding.jpeg");
+outline: 2px  white;
+font-size: 20pt;
+}
+
+
+.portal-boxes__box
+{
+color:#ffffff;
+background: #393636;
+display: block;
+list-style-type: none;
+margin: 20px;
+text-align: center;
+width: 300px;
+height: 250px;
+border-radius: 25px;
+border-style: solid;
+border-color: white;
+}
+
+
+.portal-boxes__content
+{
+color:#ffffff;
+display: block;
+padding: 20px;
+position: relative;
+text-align: center;
+font-family: "Times New Roman";
+}
+
+
+.portal-boxes__content img
+{
+color:#ffffff;
+background: #161313;
+position: absolute;
+padding: 0 8px;
+top: -10px;
+right: 8px;
+height: 20px;
+width: 20px;
+}
+
+
+A {text-decoration: none;} 
+</style>
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- BODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODY --><!-- BODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODYBODY -->
+
+<body>
+
+        <div>
+            <div class="header">
+                  <div style="background-color:#393636">
+                        
+                        <font face="Libre Baskerville"><font color="white"><center></center></font></font>
+                          </div> 
+                         </div>
+          </div>
+          <div class="header2" width="60">
+              <div style="background-color:#393636" width="60">
+                       <font face="Libre Baskerville"><font color="white"><center>Jack Andrassy</center></font></font>
+                      </div> 
+                     </div>
+      </div>
+
+        <div class="wrap">
+            <div class="bg"> <div class="image1"><a href="#"><font face="Libre Baskerville"><center>Jack Andrassy</center></font></div></div>
+            <h1></h1>
+
+
+
+<ul class="portal-boxes">
+    <a class="portal-boxes__box" href="AboutMe.html">
+        <li class="portal-boxes__content" ><div>
+          About <menu type="toolbar"></menu>
+      </div>
+    </li></a>
+     <a class="portal-boxes__box" href="WhatIHaveDone.html">
+        <li class="portal-boxes__content" ><div>
+          What I have done
+      </div>
+    </li></a>
+    <a class="portal-boxes__box" href="WhatIwantToDo.html">
+        <li class="portal-boxes__content" ><div>
+          What I want to do
+      </div>
+    </li></a>
+    <a class="portal-boxes__box" href="WhatIamDoingNow.html">
+        <li class="portal-boxes__content" ><div>
+          What I am doing now
+      </div>
+    </li></a>
+    <a class="portal-boxes__box" href="WorkExperience.html">
+        <li class="portal-boxes__content" ><div>
+          Work experience
+      </div>
+    </li></a>
+    <a class="portal-boxes__box" href="VideoPage.html">
+        <li class="portal-boxes__content" ><div>
+          Video page
+      </div>
+    </li></a>
+    <a class="portal-boxes__box" href="ContactPage.html">
+        <li class="portal-boxes__content" ><div>
+          Contact me
+    </li></a>
+  </ul>
+
+          </div>
+          
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- SCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPT --><!-- SCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPTSCRIPT -->
+
+
+    <script>
+            var lFollowX = 0,
+        lFollowY = 0,
+        x = 0,
+        y = 0,
+        friction = 1 / 30;
+    
+    function moveBackground() {
+      x += (lFollowX - x) * friction;
+      y += (lFollowY - y) * friction;
+      
+      translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+    
+      $('.bg').css({
+        '-webit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate
+      });
+    
+      window.requestAnimationFrame(moveBackground);
+    }
+    
+    $(window).on('mousemove click', function(e) {
+    
+      var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+      var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+      lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+      lFollowY = (10 * lMouseY) / 100;
+    
+    });
+    
+    moveBackground();
+            </script>
+</html>
